@@ -10,6 +10,6 @@ fi
 
 alias bat="batcat"
 alias rec="asciinema rec"
-alias ztheme='(){ export ZSH_THEME="$@" && source /home/carlos/.oh-my-zsh/oh-my-zsh.sh }'
+alias ztheme='export ZSH_THEME="$@" && source /home/carlos/.oh-my-zsh/oh-my-zsh.sh'
 
 ztheme agnoster
