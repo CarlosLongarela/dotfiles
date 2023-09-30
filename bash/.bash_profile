@@ -5,3 +5,16 @@ fi
 
 alias bat="batcat"
 alias rec="asciinema rec"
+
+alias github_download='function _github_download() { \
+    if [ -z "$1" ]; then \
+        echo "ERROR: Debes proporcionar una URL o ruta de archivo como parámetro."; \
+        return 1; \
+    fi; \
+    local url="$1"; \
+    if [[ $url != http* ]]; then \
+        url="https://raw.githubusercontent.com/$url"; \
+    fi; \
+    local filename="${url##*/}"; \
+    curl -LJO "$url" && mv "$filename" "$PWD"; \
+}; _github_download'

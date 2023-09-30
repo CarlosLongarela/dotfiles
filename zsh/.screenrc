@@ -112,10 +112,3 @@ bind F eval "hardstatus alwayslastline"
 # screen -t monkey ssh monkey
 # screen -t mail 8 mutt
 # screen -t daemon 9 tail -f /var/log/daemon.log
-
-# -------------
-# Mac Trackpad
-# -------------
-defscrollback 5000
-termcapinfo xterm* ti@:te@
-Copied
