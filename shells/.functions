@@ -30,10 +30,13 @@ function github-download() {
 
 function ssh-server() {
     # Leer los nombres de host del archivo .ssh/config
-    hosts=($(grep -oP '(?<=Host\s)\S+' ~/.ssh/config))
+    hosts=("${(@f)$(grep -oP '(?<=Host\s)\S+' ~/.ssh/config)}")
 
     # Mostrar los nombres de host en una lista numerada
     echo "Nombres de Host disponibles:"
+    echo "------------------------"
+    echo ""
+
     for i in "${!hosts[@]}"; do
         echo "$((i+1)). ${hosts[$i]}"
     done
