@@ -1,0 +1,136 @@
+# Conectar por SSH al servidor OVH principal, donde está instalado Proxmox.
+alias ssh-ovh-proxmox="ssh root@149.202.92.139"
+
+# Conectar por SSH al servidor Vultr de Rumar.
+alias ssh-rumar="ssh root@136.244.111.127"
+
+# Conectar por SSH al servidor Vultr de Dental Shop Discount.
+alias ssh-dental="ssh root@45.63.115.202"
+
+# Conectar por SSH al servidor Vultr de Escuela de Inspiración.
+alias ssh-escuela="ssh root@208.76.223.13"
+
+# Conectar por SSH al servidor OVH de Chavetas para Dev.
+alias ssh-chavetas-dev="ssh root@65.20.96.6"
+
+# Conectar por SSH al servidor OVH de Chavetas para Prod.
+alias ssh-chavetas-prod="ssh root@87.98.225.109"
+
+# Conectar por SSH al servidor OVH personal Dev Server.
+alias ssh-ovhdev="ssh root@152.228.203.240"
+
+# Conectar por SSH al servidor Vultr Dev Server.
+alias ssh-vultrdev="ssh root@45.77.65.39"
+
+# Conectar por SSH al servidor Contabo Dev Server.
+alias ssh-contabo-dev="ssh root@161.97.121.41"
+
+# Conectar por SSH al servidor de DNG Photo Magazine en OVH.
+alias ssh-fotodng="ssh root@152.228.203.245"
+alias mosh-fotodng="mosh root@152.228.203.245"
+
+# Conectar por SSH al servidor de Luis R Silva.
+alias ssh-luisrsilva="ssh root@149.248.18.209"
+
+# Conectar por SSH al servidor OVH de InvoiceNinja administrado desde TinyCP.
+alias ssh-invoice="ssh carlos@152.228.203.242"
+
+# Conectar por SSH al servidor de Enuc creado por Trey.
+alias ssh-enuc-trey="ssh root@51.254.13.169"
+
+# Conectar por SSH al servidor de MyCCToolkit en Amazon Lightsail.
+alias ssh-mycctoolkit="ssh root@18.169.21.106"
+
+# Conectar por SSH al servidor de EvaPorto en Amazon AWS EC2.
+alias ssh-evaporto-ec2="ssh root@13.39.15.105"
+
+# Conectar por SSH al servidor de Desarrollo en Amazon AWS EC2.
+alias ssh-dev-aws="ssh root@18.100.203.234"
+
+# Conectar por SSH al servidor de El Ajuar de los Infantes en Vultr.
+alias ssh-ajuar="ssh root@208.85.18.21"
+
+# Conectar por SSH al servidor de El Ajuar de los Infantes en Vultr.
+alias ssh-ajuar-new="ssh root@95.179.241.135"
+
+# Conectar por SSH al servidor de Una idea un viaje en OVH.
+alias ssh-unaidea="ssh root@152.228.203.241"
+
+# Conectar por SSH al servidor/hosting de Un salto a Galicia (Lucushost).
+alias ssh-unsalto-agalicia="ssh iprbqdeg@51.254.111.187"
+
+# Conectar por SSH al servidor/hosting de Los Viajes de Ali (Lucushost).
+alias ssh-los-viajes-de-ali="ssh losviaje@51.254.111.187"
+
+# Conectar por SSH al servidor/hosting de From Sun with Love (Lucushost).
+alias ssh-from-sun="ssh lcnbobww@188.165.130.254"
+
+# Conectar por SSH al servidor/hosting de La Gulateca (SiteGround).
+alias ssh-gulateca="ssh u3-wgydypt3kgms@c87721.sgvps.net -p18765"
+
+# Conectar por SSH al servidor/hosting de Photolari (SiteGround).
+alias ssh-photolari="ssh u2-9e6z34n83cr6@ssh.photolari.com -p18765"
+
+# Conectar por SSH al servidor/hosting de ezkratom (SiteGround).
+alias ssh-ezkratom="ssh u1-esq9fmyq6gy8@ssh.ezkratom.com -p18765"
+
+# Conectar por SSH al servidor/hosting de 13bits (SiteGround).
+alias ssh-13bits="ssh u2-nhfahst459ht@c85842.sgvps.net -p18765"
+
+# Conectar por SSH al servidor/hosting de skiracingcamps (SiteGround).
+alias ssh-skiracingcamps-sg="ssh u324-on5cofiymjyd@ssh.skiracingcamps.ch -p18765"
+
+# Conectar por SSH al servidor/hosting de El Viajero Accidental (Hostinger).
+alias ssh-viajero-accidental="ssh -p 65002 u852387937@89.117.116.174"
+
+# Conectar por SSH al servidor/hosting de CPD Online (Kinsta).
+alias ssh-cpd-online="ssh danahoqe@35.246.48.203 -p 50080"
+
+# Conectar por SSH al servidor/hosting de maangchicom (Kinsta).
+alias ssh-maangchicom="ssh maangchicom@34.162.230.19 -p 54466"
+
+# Llenar la cache de estos sitios web bsándose en un mapa de páginas XML.
+alias cache-taberna='/home/carlos/ocp/ocp -c 3 -v=true https://tabernawp.com/sitemap-cache.xml'
+alias cache-ajuar='/home/carlos/ocp/ocp -c 3 -v=true https://www.elajuardelosinfantes.com/sitemap-cache.xml'
+alias cache-unaidea='/home/carlos/ocp/ocp -c 3 -v=true https://unaideaunviaje.com/page-sitemap.xml'
+alias cache-unaidea-cat='/home/carlos/ocp/ocp -c 3 -v=true https://unaideaunviaje.com/category-sitemap.xml'
+
+# Ir al directorio home
+alias h='cd ~'
+
+# Ir al directorio home Windows
+alias hw='cd /mnt/c/Users/Carlos/'
+
+# Cual es mi IP
+alias ip='curl https://api.ipify.org; echo'
+
+# Borrar pantalla
+alias c="clear"
+
+# Unpack tar file
+alias untar="tar -zxvf"
+
+# Generate random 20 character password
+alias getpass="openssl rand -base64 20"
+
+# Sudo Screen
+alias sscreen="sudo screen"
+
+# APT update and upgrade
+alias apt-update="sudo apt-get update"
+alias apt-upgrade="sudo apt-get update & sudo apt-get upgrade"
+
+# Resume wget by default
+alias wget="wget -c"
+
+# Calc with math support
+alias calc="bc -l"
+
+# Directory browsing
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+alias .4="cd ../../../../"
+alias .5="cd ../../../../../"

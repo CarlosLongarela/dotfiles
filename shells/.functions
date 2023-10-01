@@ -1,0 +1,54 @@
+# Bash os Zsh functions
+
+# Up n levels in the directory tree
+function up {
+    levels=$1
+
+    while [ $levels -gt 0 ]; do
+        cd ..
+        levels=$((levels - 1))
+    done
+}
+
+# Download a file from GitHub
+function github-download() {
+    if [ -z "$1" ]; then
+        echo "ERROR: Debes proporcionar una URL o ruta de archivo como parámetro.";
+        return 1;
+    fi;
+
+    local url="$1";
+
+    if [[ $url != http* ]]; then
+        url="https://raw.githubusercontent.com/$url";
+    fi;
+
+    local filename="${url##*/}";
+
+    curl -LJO "$url" && mv "$filename" "$PWD";
+}
+
+function ssh_server() {
+    # Leer los nombres de host del archivo .ssh/config
+    hosts=($(grep -oP '(?<=Host\s)\S+' ~/.ssh/config))
+
+    # Mostrar los nombres de host en una lista numerada
+    echo "Nombres de Host disponibles:"
+    for i in "${!hosts[@]}"; do
+        echo "$((i+1)). ${hosts[$i]}"
+    done
+
+    # Leer la selección del usuario
+    read -p "Seleccione un número para conectarse a un Host: " choice
+
+    # Verificar si la selección es válida
+    if [[ $choice =~ ^[0-9]+$ && $choice -ge 1 && $choice -le ${#hosts[@]} ]]; then
+        # Obtener el nombre de host seleccionado
+        selected_host=${hosts[$((choice-1))]}
+
+        # Ejecutar el comando ssh con el nombre de host seleccionado
+        ssh $selected_host
+    else
+        echo "Selección inválida. Por favor, seleccione un número válido."
+    fi
+}
