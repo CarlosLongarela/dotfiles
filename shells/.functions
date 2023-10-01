@@ -28,7 +28,7 @@ function github-download() {
     curl -LJO "$url" && mv "$filename" "$PWD";
 }
 
-function ssh_server() {
+function ssh-server() {
     # Leer los nombres de host del archivo .ssh/config
     hosts=($(grep -oP '(?<=Host\s)\S+' ~/.ssh/config))
 
