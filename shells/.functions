@@ -32,6 +32,23 @@ function ssh-host {
     # Obtiene la lista de hosts del archivo .ssh/config
     hosts=($(grep '^Host' ~/.ssh/config | awk '{print $2}'))
 
+    # Verificar si se proporcionó un parámetro
+    if [[ $# -eq 1 ]]; then
+        # Verificar si el parámetro es un número
+        if [[ $1 =~ ^[0-9]+$ && $1 -ge 1 && $1 -le ${#hosts[@]} ]]; then
+            # Obtener el nombre de host seleccionado
+            selected_host=${hosts[$(( $1 ))]}
+
+            # Conectarse al host seleccionado
+            ssh $selected_host
+            return 1
+        else
+            # Conectarse al host proporcionado
+            ssh $1
+            return 1
+        fi
+    fi
+
     # Imprime la lista de hosts
     echo ""
     echo "Lista de hosts:"
