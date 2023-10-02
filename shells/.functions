@@ -28,28 +28,34 @@ function github-download() {
     curl -LJO "$url" && mv "$filename" "$PWD";
 }
 
-function ssh-server() {
-    # Leer los nombres de host del archivo .ssh/config
-    hosts=("${(@f)$(grep -oP '(?<=Host\s)\S+' ~/.ssh/config)}")
+function ssh-host {
+    # Obtiene la lista de hosts del archivo .ssh/config
+    hosts=($(grep '^Host' ~/.ssh/config | awk '{print $2}'))
 
-    # Mostrar los nombres de host en una lista numerada
-    echo "Nombres de Host disponibles:"
-    echo "------------------------"
+    # Imprime la lista de hosts
+    echo ""
+    echo "Lista de hosts:"
+    echo "--------------"
     echo ""
 
-    for i in "${!hosts[@]}"; do
-        echo "$((i+1)). ${hosts[$i]}"
+    i=0
+    for host in "${hosts[@]}"; do
+        i=$((i+1))
+        echo "$i - $host"
     done
 
-    # Leer la selección del usuario
-    read -p "Seleccione un número para conectarse a un Host: " choice
+    echo ""
+
+    # Pedir al usuario que seleccione un host
+    echo "Selecciona un número de 1 a $i para conectarte a un host: "
+    read choice
 
     # Verificar si la selección es válida
     if [[ $choice =~ ^[0-9]+$ && $choice -ge 1 && $choice -le ${#hosts[@]} ]]; then
         # Obtener el nombre de host seleccionado
-        selected_host=${hosts[$((choice-1))]}
+        selected_host=${hosts[$((choice))]}
 
-        # Ejecutar el comando ssh con el nombre de host seleccionado
+        # Conectarse al host seleccionado
         ssh $selected_host
     else
         echo "Selección inválida. Por favor, seleccione un número válido."
