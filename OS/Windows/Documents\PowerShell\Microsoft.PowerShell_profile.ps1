@@ -10,6 +10,9 @@ Set-Alias -Name d -Value date
 # Borrar pantalla
 Set-Alias -Name c -Value clear
 
+# Ejecutar Bito
+Set-Alias -Name bito -Value C:\Users\Carlos\AppData\Local\Programs\Bito\bito.exe
+
 # Ir al directorio home
 function home {
 	& Set-Location $env:USERPROFILE
