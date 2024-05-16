@@ -1,4 +1,4 @@
-# Bash os Zsh functions
+# Bash and Zsh functions
 
 # Up n levels in the directory tree
 function up {
