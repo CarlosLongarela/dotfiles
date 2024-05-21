@@ -9,8 +9,8 @@ cs_re:green|green,,bold:\[../.../....:..:..:.. \+....\]
 
 ### Verbs
 cs_re_s:green,,bold:"(GET|HEAD)[ ]
-cs_re_s:yellow,,bold:"(POST)[ ]
-cs_re_s:red,,bold:"(PUT|DELETE)[ ]
+cs_re_s:yellow,,bold:"(POST|OPTIONS)[ ]
+cs_re_s:red,,bold:"(PUT|PATCH|DELETE)[ ]
 
 ### HTTP Version
 cs_re_s:magenta,,bold: (HTTP\/|SPDY)(.{1,3})"
