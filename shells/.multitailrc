@@ -22,7 +22,7 @@ cs_re_s:red,,bold:" (40[0-9])[ ]
 cs_re_s:white,red,bold:" (50[0-9])[ ]
 
 ### Bytes
-cs_re_s:blue,,bold:" [0-9]{3} ([0-9]{1,7}) "
+cs_re_s:blue,,bold:" [0-9]{3} ([0-9]+) "
 
 ### Referer
 cs_re:cyan,,bold: "(http|https)://(.*)"[ ]
