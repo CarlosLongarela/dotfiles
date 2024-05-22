@@ -75,20 +75,23 @@ cs_re:magenta:" "(.*)"
 ##############################
 colorscheme:nginx_error:error Nginx logging (webserver)
 
-### Fecha y hora del error
-cs_re:yellow:..../../.. ..:..:..
+### Error date-time
+cs_re:yellow|yellow,,bold:..../../.. ..:..:..
 
 ### Error
-cs_re:red:\[error\] ......:
+cs_re_s:red|red,,bold:\[error\]\s(.*)\sclient:
 
-### Cliente
-cs_re:yellow: client: [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3},
+### Client
+cs_re_s:yellow: client:\s(.*),\sserver:
 
 ### Server
-cs_re:green: server: .{1,50},
+cs_re_s:green:\sserver:\s(.*),\srequest:
 
-### Peticion
-cs_re:cyan: request: ".{1,150}",
+### Request
+cs_re_s:cyan:\srequest:\s(.*),\shost:
 
 ### Host
-cs_re:green: host: ".{1,50}"$
+cs_re_s:green:host:\s*(\S+")
+
+### Referrer
+cs_re_s:cyan: referrer:\s(".*")
