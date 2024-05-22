@@ -1,4 +1,6 @@
-# Open Lite Speed Server: GridPane
+########################################
+### Open Lite Speed Server: GridPane ###
+########################################
 colorscheme:ols:default OLS logging (webserver)
 
 ### ip-adresses in the format x.x.x.x
@@ -29,3 +31,64 @@ cs_re:cyan,,bold: "(http|https)://(.*)"[ ]
 
 ### Without referer
 cs_re:cyan: "-"
+
+############################################
+### Nginx access: we_log GridPane format ###
+############################################
+#log_format we_log '[$time_local] $remote_addr $upstream_response_time $upstream_cache_status $http_host "$request" $status $body_bytes_sent $request_time "$http_referer" "$http_user_agent"';
+colorscheme:nginx:default Nginx logging (webserver)
+
+### Access date-time
+cs_re:green|green,,bold:\[../.../....:..:..:.. \+....\]
+
+### ip-adresses in the format x.x.x.x
+cs_re_s:yellow|yellow,,bold:[ ]([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})[ ]
+
+### Upstream response time
+cs_re_s:blue:[ ]([0-9]+\.[0-9]+)[ ]
+
+### Verbs
+cs_re_s:green,,bold:"(GET|HEAD)[ ]
+cs_re_s:yellow,,bold:"(POST|OPTIONS)[ ]
+cs_re_s:red,,bold:"(PUT|PATCH|DELETE)[ ]
+
+### HTTP Version
+cs_re_s:magenta,,bold: (HTTP\/|SPDY)(.{1,3})"
+
+### Response STATE Codes
+cs_re_s:green,,bold:" (200)[ ]
+cs_re_s:yellow,,bold:" (30[0-9])[ ]
+cs_re_s:red,,bold:" (40[0-9])[ ]
+cs_re_s:white,red,bold:" (50[0-9])[ ]
+
+### Referer
+cs_re:cyan,,bold: "(http|https)://(.*)"[ ]
+
+### Without referer
+cs_re:cyan: "-"
+
+### Browser User Agent
+cs_re:magenta:" "(.*)"
+
+##############################
+### Nginx errors: GridPane ###
+##############################
+colorscheme:nginx_error:error Nginx logging (webserver)
+
+### Fecha y hora del error
+cs_re:yellow:..../../.. ..:..:..
+
+### Error
+cs_re:red:\[error\] ......:
+
+### Cliente
+cs_re:yellow: client: [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3},
+
+### Server
+cs_re:green: server: .{1,50},
+
+### Peticion
+cs_re:cyan: request: ".{1,150}",
+
+### Host
+cs_re:green: host: ".{1,50}"$
