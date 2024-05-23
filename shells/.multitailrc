@@ -4,7 +4,7 @@
 colorscheme:ols:default OLS logging (webserver)
 
 ### ip-adresses in the format x.x.x.x
-cs_re_s:yellow|yellow,,bold:"([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) -
+cs_re_s:yellow|yellow,,bold:([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) -
 
 ### Access date-time
 cs_re:green|green,,bold:\[../.../....:..:..:.. \+....\]
