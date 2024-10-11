@@ -36,6 +36,12 @@ alias wget="wget -c"
 # Calc with math support
 alias calc="bc -l"
 
+# Alias for NeoVim
+alias neo="nvim"
+alias neovim="nvim"
+alias v="nvim"
+alias n="nvim"
+
 # Directory browsing
 alias cd..="cd .."
 alias ..="cd .."
