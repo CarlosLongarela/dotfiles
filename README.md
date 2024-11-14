@@ -10,3 +10,5 @@ Give execution permissions to the `install.sh` script:
 
 Execute the script:
 `./install.sh`
+
+Download this script from github and execute install.sh `git clone https://github.com/CarlosLongarela/dotfiles.git && cd dotfiles && ./install.sh`
