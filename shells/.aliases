@@ -42,6 +42,9 @@ alias neovim="nvim"
 alias v="nvim"
 alias n="nvim"
 
+# Alias for Bat
+alias bat="batcat"
+
 # Directory browsing
 alias cd..="cd .."
 alias ..="cd .."

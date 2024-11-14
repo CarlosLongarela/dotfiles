@@ -1,3 +1,6 @@
+### Added by Carlos Longarela dotfiles system
+### https://github.com/CarlosLongarela/dotfiles
+###
 # include .functions if it exists
 if [ -f ~/.functions ]; then
     . ~/.functions
@@ -8,5 +11,4 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-alias bat="batcat"
-alias rec="asciinema rec"
+#alias rec="asciinema rec"
