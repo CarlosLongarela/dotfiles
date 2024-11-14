@@ -40,7 +40,7 @@ alias calc="bc -l"
 alias neo="nvim"
 alias neovim="nvim"
 alias v="nvim"
-alias n="nvim"
+alias nv="nvim"
 
 # Alias for Bat
 alias bat="batcat"
