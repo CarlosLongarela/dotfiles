@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Create symbolic links for .aliases
-ln -sf ~/shells/.aliases ~/.aliases
+ln -sf ~/dotfiles/shells/.aliases ~/.aliases
 
 # Create symbolic links for .functions
-ln -sf ~/shells/.functions ~/.functions
+ln -sf ~/dotfiles/shells/.functions ~/.functions
 
 echo "Symlinks created successfully."
 
