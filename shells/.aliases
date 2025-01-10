@@ -1,9 +1,6 @@
 # Ir al directorio home
 alias h='cd ~'
 
-# Ir al directorio home Windows
-alias hw='cd /mnt/c/Users/Carlos/'
-
 # Cual es mi IP
 alias ip='curl https://api.ipify.org; echo'
 
