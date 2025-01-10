@@ -6,6 +6,11 @@ if [ -f ~/.functions ]; then
     . ~/.functions
 fi
 
+# include .functions_private if it exists
+if [ -f ~/.functions_private ]; then
+    . ~/.functions_private
+fi
+
 # include .aliases if it exists
 if [ -f ~/.aliases ]; then
     . ~/.aliases
