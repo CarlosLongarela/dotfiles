@@ -11,4 +11,9 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# include .aliases_private if it exists
+if [ -f ~/.aliases_private ]; then
+    . ~/.aliases_private
+fi
+
 #alias rec="asciinema rec"

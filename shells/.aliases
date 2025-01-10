@@ -1,11 +1,3 @@
-# Llenar la cache de estos sitios web bsándose en un mapa de páginas XML.
-alias cache-taberna='/home/carlos/ocp/ocp -c 3 -v=true https://tabernawp.com/sitemap-cache.xml'
-alias cache-ajuar='/home/carlos/ocp/ocp -c 3 -v=true https://www.elajuardelosinfantes.com/sitemap-cache.xml'
-alias cache-unaidea='/home/carlos/ocp/ocp -c 3 -v=true https://unaideaunviaje.com/page-sitemap.xml'
-alias cache-unaidea-cat='/home/carlos/ocp/ocp -c 3 -v=true https://unaideaunviaje.com/category-sitemap.xml'
-alias cache-clementine='/home/carlos/ocp/ocp -c 3 -v=true https://beclementine.com/sitemap-cache.xml'
-alias cache-chavetas='/home/carlos/ocp/ocp -c 3 -v=true https://viajes.chavetas.es/sitemap-prime.xml'
-
 # Ir al directorio home
 alias h='cd ~'
 
