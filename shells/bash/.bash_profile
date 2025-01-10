@@ -16,9 +16,6 @@ if [ -f ~/.aliases_private ]; then
     . ~/.aliases_private
 fi
 
-if [ -f ~/.cache/oh-my-posh/themes/montys.omp.json ]; then
-    eval "$(oh-my-posh init bash --config ~/.cache/oh-my-posh/themes/montys.omp.json)"
-    . "/root/.acme.sh/acme.sh.env"
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
 fi
-
-#alias rec="asciinema rec"
