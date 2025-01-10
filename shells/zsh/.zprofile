@@ -11,9 +11,9 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-# include .aliases if it exists
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
+# include .aliases_private if it exists
+if [ -f ~/.aliases_private ]; then
+    . ~/.aliases_private
 fi
 
 alias bat="batcat"
