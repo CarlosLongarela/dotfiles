@@ -38,6 +38,9 @@ alias nv="nvim"
 # Alias for Bat
 alias bat="batcat"
 
+# Asciinema
+alias rec="asciinema rec"
+
 # Directory browsing
 alias cd..="cd .."
 alias ..="cd .."
