@@ -16,9 +16,6 @@ if [ -f ~/.aliases_private ]; then
     . ~/.aliases_private
 fi
 
-alias bat="batcat"
-alias rec="asciinema rec"
-
 alias theme-1="omz theme use fino-time"
 alias theme-2="omz theme use agnoster"
 alias theme-3="omz theme use robbyrussell"
